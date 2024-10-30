@@ -50,8 +50,8 @@ class SMail:
 
 if __name__ == '__main__':
     with open('emails.txt') as f:
-        a = f.read()
-        list_email = a.split('\n')
-    for i in range(len(list_email)):
-        email = SMail(login, list_email[i], them, password)
+        email = f.read()
+        list_emails = email.split('\n')
+    for i in range(len(list_emails)):
+        email = SMail(login, list_emails[i], them, password)
         print(email.send_email())
